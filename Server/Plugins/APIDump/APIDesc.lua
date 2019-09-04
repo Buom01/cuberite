@@ -9700,7 +9700,7 @@ a_Player:OpenWindow(Window);
 							Type = "boolean",
 						},
 					},
-					Notes = "Returns true if the player has a custom name.",
+					Notes = "Returns true if the armor stand has a custom name.",
 				},
 				GetCustomName =
 				{
@@ -9754,7 +9754,7 @@ a_Player:OpenWindow(Window);
 					},
 					Notes = "Returns true if the armor stand has gravity.",
 				},
-				IsNormal =
+				IsSizeNormal =
 				{
 					Returns =
 					{
@@ -9764,11 +9764,11 @@ a_Player:OpenWindow(Window);
 					},
 					Notes = "Returns true if the armor stand is a normal sized one.",
 				},
-				SetNormal =
+				SetSizeNormal =
 				{
 					Notes = "Sets the armor stand as a normal sized one.",
 				},
-				IsSmall =
+				IsSizeSmall =
 				{
 					Returns =
 					{
@@ -9778,7 +9778,7 @@ a_Player:OpenWindow(Window);
 					},
 					Notes = "Returns true if the armor stand is a small one.",
 				},
-				SetSmall =
+				SetSizeSmall =
 				{
 					Notes = "Sets the armor stand as a small one.",
 				},

@@ -222,7 +222,7 @@ bool cArmorStand::DoTakeDamage(TakeDamageInfo & a_TDI)
 
 
 
-void cArmorStand::SpawnOn(cClientHandle & a_ClientHandle)  // Should got any rotation and should replace any of non-solid blocks like snow
+void cArmorStand::SpawnOn(cClientHandle & a_ClientHandle)  // Should got any rotation and should replace non-solid blocks like snow when placed
 {
 	a_ClientHandle.SendSpawnObject(*this, 78, 0, static_cast<Byte>(GetYaw()), static_cast<Byte>(GetPitch()));
 	a_ClientHandle.SendEntityMetadata(*this);
@@ -293,7 +293,7 @@ void cArmorStand::SetCustomNameAlwaysVisible(bool a_CustomNameAlwaysVisible)
 
 
 
-void cArmorStand::SetNormal()
+void cArmorStand::SetSizeNormal()
 {
 	SetHeight(0.9875);
 	SetWidth(0.25);
@@ -308,7 +308,7 @@ void cArmorStand::SetNormal()
 
 
 
-void cArmorStand::SetSmall()
+void cArmorStand::SetSizeSmall()
 {
 	SetHeight(0.9875/2);
 	SetWidth(0.25/2);
@@ -339,11 +339,11 @@ void cArmorStand::SetIsMarker(bool a_IsMarker)
 	{
 		if (m_IsSmall)
 		{
-			SetSmall();
+			SetSizeSmall();
 		}
 		else
 		{
-			SetNormal();
+			SetSizeNormal();
 		}
 	}
 }
